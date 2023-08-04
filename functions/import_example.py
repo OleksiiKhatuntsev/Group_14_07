@@ -4,5 +4,11 @@ def get_summ(*args):
 
 b = [56]
 
+
+def print_abc():
+    print("abc")
 def test_func():
     print(id(b))
+
+# if __name__ == '__main__':
+print("abc")

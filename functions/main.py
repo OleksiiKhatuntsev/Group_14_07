@@ -53,7 +53,7 @@ from import_example import get_summ, b
 # print(test_list)
 # def change_zero_element_in_list(list_to_change):
 #     list_to_change[0] = 100500
-#
+
 # change_zero_element_in_list(test_list)
 # print(test_list)
 #
@@ -71,3 +71,4 @@ if __name__ == '__main__':
     b = [80]
     test_func()
     print(id(b))
+    # change_zero_element_in_list([])
