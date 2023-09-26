@@ -1,6 +1,6 @@
-from selenium_example.pages.garage_page import GaragePage
-from selenium_example.pages.main_page import MainPage
-from selenium_example.pages.registration_form_page import RegistrationFormPage
+from garage_page import GaragePage
+from main_page import MainPage
+from registration_form_page import RegistrationFormPage
 
 
 class BaseFacade:

@@ -1,9 +1,9 @@
-import pytest
+import allure
 import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from selenium_example.facade.registration_facade import RegistrationFacade
+from registration_facade import RegistrationFacade
 
 
 
@@ -38,11 +38,14 @@ class TestRegistration(TestBase):
         self._session.delete(url="https://qauto2.forstudy.space/api/users")
         self._driver.quit()
 
+    @allure.feature("Beautiful tests")
+    @allure.issue("https://google.com", name="(CLOSED) Link for very important bug")
+    @allure.link("https://google.com", name="Link to TestRail")
     def test_registration_test(self):
         self._registration_facade.register_user("test", "testlastname", self.user_email, self.user_password, self.user_password)
         assert self._registration_facade.check_is_user_logged_in()
 
-
+    @allure.feature("Indian tests")
     def test_registration_1_test(self):
         self._driver.implicitly_wait(3)
         self._driver.get("https://guest:welcome2qauto@qauto2.forstudy.space/")
