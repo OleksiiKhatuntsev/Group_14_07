@@ -1,5 +1,6 @@
 from sqlalchemy import Column, INTEGER, VARCHAR, ForeignKey
 from sqlalchemy.orm import declarative_base, relationship
+from session import engine
 
 
 Base = declarative_base()
@@ -33,3 +34,16 @@ class UserModel(Base):
 
     def __str__(self):
         return f"Id - {self.user_id} Age - {self.age} Email - {self.email}"
+
+
+from sqlalchemy import Table, Column, Integer, String, MetaData
+meta = MetaData()
+
+students = Table(
+   'students', meta,
+   Column('id', Integer, primary_key= True),
+   Column('name', String),
+   Column('lastname123', String),
+)
+
+meta.create_all(engine)
